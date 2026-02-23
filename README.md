@@ -54,6 +54,7 @@ All settings can be overridden via environment variables.
 | `REQUEST_DELAY` | `0.3` | Seconds between HEAD requests per worker |
 | `DATASETS` | *(all)* | Space-separated dataset numbers to probe (e.g. `"8 9"`) |
 | `BACKOFF_SECS` | `30` | Initial backoff when rate-limited |
+| `PROBE_EXTENSIONS` | `mp4 avi mp3 jpg png jpeg wav mov gif` | Space-separated file extensions to probe |
 
 Examples:
 

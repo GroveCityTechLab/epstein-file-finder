@@ -24,7 +24,8 @@ OUTPUT_DIR="${OUTPUT_DIR:-./epstein_files}"
 MAX_PARALLEL="${MAX_PARALLEL:-3}"
 RETRY_COUNT="${RETRY_COUNT:-3}"
 
-EXTENSIONS=(mp4 avi mp3 jpg png jpeg wav mov gif)
+DEFAULT_EXTENSIONS="mp4 avi mp3 jpg png jpeg wav mov gif"
+IFS=' ' read -ra EXTENSIONS <<< "${PROBE_EXTENSIONS:-$DEFAULT_EXTENSIONS}"
 EXTENSIONS_STR="${EXTENSIONS[*]}"
 NUM_EXTENSIONS="${#EXTENSIONS[@]}"
 
